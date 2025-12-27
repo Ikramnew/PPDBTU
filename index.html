@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal PPDB | Yayasan Tarbiyatul Ummah</title>
+
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #0d0d0d, #064d25, #8b0000);
+      font-family: "Poppins", sans-serif;
+      min-height: 100vh;
+      color: #ffffff;
+      transition: .4s;
+    }
+
+    /* DEFAULT LIGHT MODE */
+    body.light-mode {
+      background: linear-gradient(135deg, #ffffff, #e8f5e9, #ffecec);
+      color: #1f2937;
+    }
+
+    .header {
+      padding: 70px 0 40px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-weight: 700;
+      font-size: 3rem;
+    }
+
+    body.light-mode h1,
+    body.light-mode h4,
+    body.light-mode p {
+      color: #1f2937;
+    }
+
+    .mode-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .card-link {
+      border-radius: 25px;
+      padding: 40px 25px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(12px);
+      text-align: center;
+      transition: .4s;
+      color: #ffffff;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    }
+
+    body.light-mode .card-link {
+      background: #ffffff;
+      color: #1f2937;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .card-link:hover {
+      transform: translateY(-10px);
+    }
+
+    body.light-mode .opacity-75 {
+      opacity: 1 !important;
+      color: #4b5563;
+    }
+
+    .btn-daftar {
+      border-radius: 14px;
+      font-weight: 600;
+      padding: 10px 26px;
+    }
+
+    body.light-mode .btn-outline-light {
+      background-color: #b91c1c;
+      color: #ffffff;
+      border: none;
+    }
+
+    body.light-mode .btn-outline-light:hover {
+      background-color: #991b1b;
+    }
+
+    @media (max-width: 576px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('light-mode');
+      const icon = document.getElementById("modeIcon");
+      icon.classList.toggle("bi-brightness-high-fill");
+      icon.classList.toggle("bi-moon-fill");
+    }
+  </script>
+</head>
+
+<!-- ⬇️ DEFAULT LIGHT MODE -->
+<body class="light-mode">
+
+<button class="mode-btn" onclick="toggleMode()">
+  <!-- ⬇️ ICON AWAL MATAHARI -->
+  <i id="modeIcon" class="bi bi-brightness-high-fill fs-4"></i>
+</button>
+
+<div class="container">
+
+  <div class="header">
+    <img src="logo.png" alt="Logo Yayasan" style="width:220px; margin-bottom:20px;">
+    <h1>PORTAL PPDB</h1>
+    <p class="opacity-75">
+      Penerimaan Peserta Didik Baru<br>
+      Yayasan Tarbiyatul Ummah
+    </p>
+  </div>
+
+  <div class="row g-4 justify-content-center">
+
+    <div class="col-md-4">
+      <div class="card card-link">
+        <i class="bi bi-emoji-smile fs-1 text-warning"></i>
+        <h4 class="mt-3">SPS</h4>
+        <p class="opacity-75">Satuan PAUD Sejenis</p>
+        <a href="sps.html" class="btn btn-outline-light btn-daftar mt-2">Daftar SPS</a>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card card-link">
+        <i class="bi bi-mortarboard-fill fs-1 text-success"></i>
+        <h4 class="mt-3">SDIT</h4>
+        <p class="opacity-75">Sekolah Dasar Islam Terpadu</p>
+        <a href="SDIT.html" class="btn btn-outline-light btn-daftar mt-2">Daftar SDIT</a>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card card-link">
+        <i class="bi bi-book-half fs-1 text-info"></i>
+        <h4 class="mt-3">PKBM</h4>
+        <p class="opacity-75">Paket A, B, & C</p>
+        <a href="pkbm.html" class="btn btn-outline-light btn-daftar mt-2">Daftar PKBM</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
